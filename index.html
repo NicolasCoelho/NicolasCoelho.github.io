@@ -42,6 +42,8 @@
     <button onclick="userInfo()">Informação de usuário</button>
     <button onclick="itemInfo()">Item</button>
     <button onclick="categoryInfo()">Categoria</button>
+    <button onclick="cleanCart()">Limpar Carrinho</button>
+    <button onclick="cart()">carrinho de compra</button>
   </main>
   <script>
     var _etmc = [];
@@ -70,6 +72,23 @@
       _etmc.push(["trackPageView", { "category" : "aços longos" }]);
       message('Informação de categoria');
     }
+    
+    function cleanCart() {
+     
+  _etmc.push(["setOrgId", "514006956"]);
+  _etmc.push(["trackCart", { "clear_cart": true } ]);
+  message('limpeza de carrinho');
+    }    
+    
+     function cart() {
+     
+  _etmc.push(["setOrgId", "514006956"]);
+  _etmc.push(["trackCart", { "cart": [
+    {"item" : "1", "quantity":  "1", "price" : "10", "unique_id" : "1" },
+  ]}]);
+  message('carrinho de compras');
+    }    
+    
 
     function message(type) {
       alert(`${type} disparado!`)

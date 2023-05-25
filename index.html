@@ -5,17 +5,75 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testes de Scripts</title>
-</head>
-<body>
-  <main class="">
-    <button>teste</button>
-  </main>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="text/javascript" async src="//514006956.collect.igodigital.com/collect.js"></script>
   <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
     main {
-      max-width: 800px;
+      max-width: 500px;
       margin: auto;
     }
+    main button {
+      width: 100%;
+      border: none;
+      color: #fff;
+      padding: 20px;
+      font-size: 16px;
+      background-color: steelblue;
+      margin-top: 20px;
+    }
+    main button:hover {
+      background-color: rgb(53, 112, 161);
+      cursor: pointer;
+    }
+    main button:active {
+      background-color: rgb(43, 100, 147);
+    }
   </style>
+</head>
+<body>
+  <main>
+    <button onclick="pageView()">Rastreamento de página</button>
+    <button onclick="userInfo()">Informação de usuário</button>
+    <button onclick="itemInfo()">Item</button>
+    <button onclick="categoryInfo()">Categoria</button>
+  </main>
+  <script>
+    var _etmc = [];
+
+    function pageView() {
+      _etmc.push(["setOrgId", "514006956"]);
+      _etmc.push(["trackPageView"]);
+      message('Page View');
+    }
+    
+    function userInfo() {
+      _etmc.push(["setOrgId", "514006956"]);
+      _etmc.push(["setUserInfo", {"email": "INSERT_EMAIL_OR_UNIQUE_ID"}]);
+      _etmc.push(["trackPageView"]);
+      message('Informação de usuário');
+    }
+
+    function itemInfo() {
+      _etmc.push(["setOrgId", "514006956"]);
+      _etmc.push(["trackPageView", { "item" : "INSERT_PRODUCT_CODE" }]);
+      message('Informação de item');
+    }
+
+    function categoryInfo() {
+      _etmc.push(["setOrgId", "514006956"]);
+      _etmc.push(["trackPageView", { "category" : "INSERT_CATEGORY" }]);
+      message('Informação de categoria');
+    }
+
+    function message(type) {
+      alert(`${type} disparado!`)
+    }
+  </script>
 </body>
 </html>

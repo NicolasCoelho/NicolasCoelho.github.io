@@ -54,20 +54,20 @@
     
     function userInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["setUserInfo", {"email": "INSERT_EMAIL_OR_UNIQUE_ID"}]);
+      _etmc.push(["setUserInfo", {"email": "matheus.muller@cadastra.com"}]);
       _etmc.push(["trackPageView"]);
       message('Informação de usuário');
     }
 
     function itemInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["trackPageView", { "item" : "INSERT_PRODUCT_CODE" }]);
+      _etmc.push(["trackPageView", { "item" : "1" }]);
       message('Informação de item');
     }
 
     function categoryInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["trackPageView", { "category" : "INSERT_CATEGORY" }]);
+      _etmc.push(["trackPageView", { "category" : "aços longos" }]);
       message('Informação de categoria');
     }
 

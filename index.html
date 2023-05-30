@@ -44,6 +44,7 @@
     <button onclick="categoryInfo()">Categoria</button>
     <button onclick="cleanCart()">Limpar Carrinho</button>
     <button onclick="cart()">carrinho de compra</button>
+    <button onclick="compra()">compra de produto</button>
   </main>
   <script>
     var _etmc = [];
@@ -88,6 +89,14 @@
   ]}]);
   message('carrinho de compras');
     }    
+    
+    function compra(){
+  _etmc.push(["setOrgId", "514006956"]);
+  _etmc.push(["trackConversion", { "cart": [
+    {"item" : "83", "quantity":  "1" , "price" : "0.0", "unique_id" : "83" }
+  ]}]);
+        message('compra de produto');
+    }
     
 
     function message(type) {

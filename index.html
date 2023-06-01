@@ -84,11 +84,19 @@
      function cart() {
      
   _etmc.push(["setOrgId", "514006956"]);
-  _etmc.push(["trackCart", { "cart": [
-    {"item" : "85", "quantity":  "1", "price" : "0.0", "unique_id" : "85" }
-  ]}]);
+  _etmc.push(["trackCart", { "cart": 
+   {"item" : "INSERT_PRODUCT_CODE", "quantity":  "INSERT_QUANTITY", "price" : "INSERT_PRICE", "unique_id" : "INSERT_UNIQUE_ID" }
+  }]);
   message('carrinho de compras');
     }    
+    
+    <script>
+  _etmc.push(["setOrgId", "514006956"]);
+  _etmc.push(["trackCart", { "cart": [
+    {"item" : "INSERT_PRODUCT_CODE", "quantity":  "INSERT_QUANTITY", "price" : "INSERT_PRICE", "unique_id" : "INSERT_UNIQUE_ID" },
+    {"item" : "INSERT_PRODUCT_CODE", "quantity":  "INSERT_QUANTITY", "price" : "INSERT_PRICE", "unique_id" : "INSERT_UNIQUE_ID" }
+  ]}]);
+</script>
     
     function compra(){
   _etmc.push(["setOrgId", "514006956"]);

@@ -57,14 +57,14 @@
     
     function userInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["setUserInfo", {"email": "math@teste.com"}]);
+      _etmc.push(["setUserInfo", {"email": "moni@teste.com"}]);
       _etmc.push(["trackPageView"]);
       message('Informação de usuário');
     }
 
     function itemInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["trackPageView", { "item" : "33" }]);
+      _etmc.push(["trackPageView", { "item" : "49" }]);
       message('Informação de item');
     }
 
@@ -85,7 +85,7 @@
      
   _etmc.push(["setOrgId", "514006956"]);
   _etmc.push(["trackCart", { "cart": 
-   {"item" : "33" }
+   {"item" : "49" }
   }]);
   message('carrinho de compras');
     }    
@@ -94,7 +94,7 @@
     function compra(){
   _etmc.push(["setOrgId", "514006956"]);
   _etmc.push(["trackConversion", { "cart": [
-    {"item" : "33", "quantity":  "6", "price" : "0.0", "unique_id" : "33"}
+    {"item" : "49", "quantity":  "3", "price" : "0.0", "unique_id" : "33"}
   ]}]);
         message('compra de produto');
     }

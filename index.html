@@ -40,7 +40,7 @@
   <main>
     <button onclick="pageView()">Rastreamento de páginas</button>
     <button onclick="userInfo()">Informação de usuários</button>
-    <button onclick="itemInfo()">Itenss</button>
+    <button onclick="itemInfo()">Itens</button>
     <button onclick="categoryInfo()">Categoria</button>
     <button onclick="cleanCart()">Limpar Carrinho</button>
     <button onclick="cart()">carrinho de compra</button>
@@ -57,14 +57,14 @@
     
     function userInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["setUserInfo", {"email": "moni@teste.com"}]);
+      _etmc.push(["setUserInfo", {"email": "testetodosbota@teste.com"}]);
       _etmc.push(["trackPageView"]);
       message('Informação de usuário');
     }
 
     function itemInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["trackPageView", { "item" : "49" }]);
+      _etmc.push(["trackPageView", { "item" : "40" }]);
       message('Informação de item');
     }
 
@@ -85,7 +85,7 @@
      
   _etmc.push(["setOrgId", "514006956"]);
   _etmc.push(["trackCart", { "cart": 
-   {"item" : "49" }
+   {"item" : "40" }
   }]);
   message('carrinho de compras');
     }    
@@ -94,7 +94,7 @@
     function compra(){
   _etmc.push(["setOrgId", "514006956"]);
   _etmc.push(["trackConversion", { "cart": [
-    {"item" : "49", "quantity":  "3", "price" : "0.0", "unique_id" : "33"}
+    {"item" : "40", "quantity":  "3", "price" : "0.0", "unique_id" : "33"}
   ]}]);
         message('compra de produto');
     }

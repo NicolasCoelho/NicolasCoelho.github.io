@@ -38,7 +38,7 @@
 </head>
 <body>
   <main>
-    <button onclick="pageView()">Rastreamento de página</button>
+    <button onclick="pageView()">Rastreamento de páginas</button>
     <button onclick="userInfo()">Informação de usuário</button>
     <button onclick="itemInfo()">Item</button>
     <button onclick="categoryInfo()">Categoria</button>
@@ -57,7 +57,7 @@
     
     function userInfo() {
       _etmc.push(["setOrgId", "514006956"]);
-      _etmc.push(["setUserInfo", {"email": "2003rpeterson@gmail.com"}]);
+      _etmc.push(["setUserInfo", {"email": "testepersonalization@cadastra.com"}]);
       _etmc.push(["trackPageView"]);
       message('Informação de usuário');
     }
